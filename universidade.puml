@@ -1,7 +1,56 @@
 @startuml
 
-actor Professor
-actor Aluno
-actor Funcionário
+left to right direction
+
+    actor Professor as pf
+    actor Coordenador as co
+    actor Reitor as re
+    actor Aluno as al
+
+    actor Financeiro as fi
+    actor Vigilante as vi
+    actor Faxineiro as fa
+    actor Funcionario as fc
+
+
+   usecase "Prestar serviço" as UC1
+   usecase "Atender univerisdade" as UC2
+   usecase "Pagar" as pg
+   usecase "Receber" as rb
+   usecase "Ministrar aula" as ma
+   usecase "Orientar matricula " as om 
+   usecase "Assistir aula" as aa
+   usecase "Administrar curso" as ac
+   usecase "Efetivar matricula" as em
+   usecase "Gerenciar receitas e despejas" as gr
+   usecase "Segurança da universidade" as sa
+   usecase "Administrar univerisdade" as au
+   usecase "Representar universidade" as ru
+   usecase "Ver notas" as vn
+   (aa) .> (ma) : include
+
+   fc -- UC1
+   pf -- rb
+   fa -- UC1
+   co -- ma
+   re -- au
+   al -- vn
+   re -- ru
+   re -- ma
+   vi -- sa
+   vi -- UC1
+   fi -- UC1
+   co -- om
+   co -- ac
+   rb -- UC1
+   al -- em
+
+   UC2 -- UC1
+   al -- aa
+   pf -- ma
+   fi -- gr
+   al -- pg
+   pg -- gr
+   gr -- rb
 
 @enduml

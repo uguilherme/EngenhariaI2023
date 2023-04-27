@@ -1,5 +1,5 @@
 @startuml
-/' Caso de usos do sistema restaurante '/
+/'  Caso de usos do sistema restaurante  '/
 
 left to right direction
 actor Cliente as c
@@ -13,12 +13,12 @@ package Profissional {
     actor Chefe as ch
 }
 package Restaurante {
-usecase "Comer alimento" as UC1
-usecase "Pagar" as UC2
-usecase "Beber" as UC3
-usecase "Analisar alimento" as UC4
-(UC1) .> (UC2) : include
-(UC3) .> (UC2) : <<extends>>
+    usecase "Comer alimento" as UC1
+    usecase "Pagar" as UC2
+    usecase "Beber" as UC3
+    usecase "Analisar alimento" as UC4
+    (UC1) .> (UC2) : include
+    (UC3) .> (UC2) : <<extends>>
 }
 sa -- UC4
 c -- UC1
