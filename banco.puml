@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+actor Cliente as cl
+
+    actor Caixa as ca
+    actor "Gerente PJ" as gj
+    actor "Gerente PF" as gp
+    actor Tesoureiro as ts
+
+    usecase "Receber Pagamento" as rp
+    usecase "Saquar" as sq
+    usecase "Ver extrato" as vs
+    usecase "Depositar" as dp
+
+    cl -- vs
+    cl -- dp
+    cl -- sq
+    ca -- rp
+    gj -- rp
+    gp -- rp
+    ts -- rp
+
+@enduml
