@@ -1,0 +1,26 @@
+@startuml
+
+    left to right direction
+
+    actor "Gerente de compras" as gc
+    actor "Suprevisor(a) de estoque" as se 
+    actor "Coordenador de produção" as cp 
+    actor "Analista de qualidade" as aq
+    actor "Responsável por vendas" as rv
+ 
+    usecase "Adquirir ingredientes" as UC1
+    usecase "Gerenciar armazenamento" as UC2
+    usecase "Coordena a utilização dos ingredientes" as UC3
+
+    (UC1) . (UC2) : include
+    gc --> se
+    gc -- UC1
+    se -- UC2
+    cp -- UC3
+
+
+
+
+
+
+@enduml
