@@ -1,5 +1,5 @@
 @startuml
-/'  Caso de usos do sistema restaurante  '/
+/'     Caso de usos do sistema restaurante     '/
 
 left to right direction
 actor Cliente as c

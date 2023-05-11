@@ -9,7 +9,7 @@ actor Cliente as cl
     actor Tesoureiro as ts
 
     usecase "Receber Pagamento" as rp
-    usecase "Saquar" as sq
+    usecase "Saquar Dinheiro" as sq
     usecase "Ver extrato" as vs
     usecase "Depositar" as dp
 

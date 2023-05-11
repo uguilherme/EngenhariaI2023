@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor Cliente
+actor Farmacêutico
+actor Caixa
+
+rectangle Farmácia {
+  Cliente -- (Solicita Medicamento)
+  Farmacêutico -- (Verifica Receita)
+  Farmacêutico -- (Procura Medicamento)
+  Farmacêutico -- (Entrega Medicamento)
+  Cliente -- (Realiza Pagamento)
+  Farmacêutico -- (Coleta Dados)
+  Farmacêutico -- (Recebe Assinatura)
+  (Realiza Pagamento) -- Caixa
+
+}
+
+@enduml
