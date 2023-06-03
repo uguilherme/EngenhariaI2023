@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+
+actor "Professor/Coordenador/Técnico" as professor
+
+rectangle "Portal de Reservas" as portal {
+  rectangle "Visualizar Salas Disponíveis" as salas_disponiveis
+  rectangle "Realizar Reservas" as reservas
+  rectangle "Consultar Reservas" as consultar
+  rectangle "Cancelar Reservas" as cancelar
+  rectangle "Enviar Notificações" as notificacoes
+
+  professor -- salas_disponiveis : Visualizar
+  professor --> reservas : Realizar
+  professor -- consultar : Consultar
+  professor --> cancelar : Cancelar
+  salas_disponiveis --> reservas : Selecionar Sala
+  reservas .> notificacoes
+  cancelar .> notificacoes
+  notificacoes --> professor
+  
+}
+
+@enduml

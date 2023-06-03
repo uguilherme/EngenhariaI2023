@@ -1,0 +1,22 @@
+@startuml
+
+left to right direction
+
+    actor Professor as pr
+    actor Coordenador as co
+    actor Técnico as tc
+
+rectangle "caso de uso"{
+    pr -- (A visualização das salas de aula disponíveis para reserva)
+    tc -- (A visualização das salas de aula disponíveis para reserva)
+    co -- (A visualização das salas de aula disponíveis para reserva)
+    pr -- (A realização de reservas por parte dos professores para aulas)
+    co -- (A realização de reservas por parte dos professores para aulas)
+    pr -- (A possibilidade de cancelamento de reservas)
+    co -- (A possibilidade de cancelamento de reservas)
+    tc -- (A possibilidade de cancelamento de reservas)
+    tc -- (Deferir e Indeferir reserva)
+}
+
+
+@enduml
