@@ -1,0 +1,43 @@
+@startuml
+
+left to right direction
+
+class "Produto" {
+  - codigo
+  - nome
+  - preco
+}
+
+class "Cliente" {
+  - id
+  - nome
+  - endereco
+}
+
+class "Pedido" {
+  - numero
+  - data
+  - status
+}
+
+class "ItemPedido" {
+  - quantidade
+  - subtotal
+}
+
+class "Fornecedor" {
+  - id
+  - nome
+  - endereco
+}
+
+class "Estoque" {
+  - quantidade
+}
+
+Cliente "1" *-- "1..*" Pedido
+Pedido "1" *-- "1..*" ItemPedido
+Produto "1" -- "1..*" ItemPedido
+Produto "1" *-- "0..*" Estoque
+Fornecedor "1" *-- "1..*" Produto
+@enduml
